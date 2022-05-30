@@ -1,10 +1,5 @@
 package service
 
-import (
-	"math/rand"
-	"time"
-)
-
 var defaultAvatars = []string{
 	"https://assets.paopao.info/public/avatar/default/zoe.png",
 	"https://assets.paopao.info/public/avatar/default/william.png",
@@ -59,6 +54,6 @@ var defaultAvatars = []string{
 }
 
 func (s *Service) GetRandomAvatar() string {
-	rand.Seed(time.Now().UnixMicro())
-	return defaultAvatars[rand.Intn(len(defaultAvatars))]
+	// rand.Seed(time.Now().UnixMicro())
+	return defaultAvatars[0]
 }

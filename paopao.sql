@@ -19,7 +19,7 @@ CREATE TABLE `p_attachment` (
   `is_del` tinyint unsigned NOT NULL DEFAULT '0' COMMENT '是否删除 0 为未删除、1 为已删除',
   PRIMARY KEY (`id`) USING BTREE,
   KEY `idx_user` (`user_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=100041 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='附件';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='附件';
 
 -- ----------------------------
 -- Table structure for p_captcha
@@ -39,7 +39,7 @@ CREATE TABLE `p_captcha` (
   KEY `idx_phone` (`phone`) USING BTREE,
   KEY `idx_expired_on` (`expired_on`) USING BTREE,
   KEY `idx_use_times` (`use_times`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1021 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='手机验证码';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='手机验证码';
 
 -- ----------------------------
 -- Table structure for p_comment
@@ -58,7 +58,7 @@ CREATE TABLE `p_comment` (
   PRIMARY KEY (`id`) USING BTREE,
   KEY `idx_post` (`post_id`) USING BTREE,
   KEY `idx_user` (`user_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=6001736 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='评论';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='评论';
 
 -- ----------------------------
 -- Table structure for p_comment_content
@@ -80,7 +80,7 @@ CREATE TABLE `p_comment_content` (
   KEY `idx_user` (`user_id`) USING BTREE,
   KEY `idx_type` (`type`) USING BTREE,
   KEY `idx_sort` (`sort`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=11001738 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='评论内容';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='评论内容';
 
 -- ----------------------------
 -- Table structure for p_comment_reply
@@ -100,7 +100,7 @@ CREATE TABLE `p_comment_reply` (
   `is_del` tinyint unsigned NOT NULL DEFAULT '0' COMMENT '是否删除 0 为未删除、1 为已删除',
   PRIMARY KEY (`id`) USING BTREE,
   KEY `idx_comment` (`comment_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=12000015 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='评论回复';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='评论回复';
 
 -- ----------------------------
 -- Table structure for p_message
@@ -125,7 +125,7 @@ CREATE TABLE `p_message` (
   KEY `idx_receiver` (`receiver_user_id`) USING BTREE,
   KEY `idx_is_read` (`is_read`) USING BTREE,
   KEY `idx_type` (`type`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=16000033 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='消息通知';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='消息通知';
 
 -- ----------------------------
 -- Table structure for p_post
@@ -151,7 +151,7 @@ CREATE TABLE `p_post` (
   `is_del` tinyint unsigned NOT NULL DEFAULT '0' COMMENT '是否删除 0 为未删除、1 为已删除',
   PRIMARY KEY (`id`) USING BTREE,
   KEY `idx_user` (`user_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1080017989 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='冒泡/文章';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='冒泡/文章';
 
 -- ----------------------------
 -- Table structure for p_post_attachment_bill
@@ -169,7 +169,7 @@ CREATE TABLE `p_post_attachment_bill` (
   PRIMARY KEY (`id`) USING BTREE,
   KEY `idx_post` (`post_id`) USING BTREE,
   KEY `idx_user` (`user_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=5000002 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='冒泡/文章附件账单';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='冒泡/文章附件账单';
 
 -- ----------------------------
 -- Table structure for p_post_collection
@@ -186,7 +186,7 @@ CREATE TABLE `p_post_collection` (
   PRIMARY KEY (`id`) USING BTREE,
   KEY `idx_post` (`post_id`) USING BTREE,
   KEY `idx_user` (`user_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=6000012 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='冒泡/文章收藏';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='冒泡/文章收藏';
 
 -- ----------------------------
 -- Table structure for p_post_content
@@ -206,7 +206,7 @@ CREATE TABLE `p_post_content` (
   PRIMARY KEY (`id`) USING BTREE,
   KEY `idx_post` (`post_id`) USING BTREE,
   KEY `idx_user` (`user_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=180022546 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='冒泡/文章内容';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='冒泡/文章内容';
 
 -- ----------------------------
 -- Table structure for p_post_star
@@ -223,7 +223,7 @@ CREATE TABLE `p_post_star` (
   PRIMARY KEY (`id`) USING BTREE,
   KEY `idx_post` (`post_id`) USING BTREE,
   KEY `idx_user` (`user_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=6000028 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='冒泡/文章点赞';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='冒泡/文章点赞';
 
 -- ----------------------------
 -- Table structure for p_tag
@@ -242,7 +242,7 @@ CREATE TABLE `p_tag` (
   UNIQUE KEY `idx_tag` (`tag`) USING BTREE,
   KEY `idx_user` (`user_id`) USING BTREE,
   KEY `idx_num` (`quote_num`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=9000065 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='标签';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='标签';
 
 -- ----------------------------
 -- Table structure for p_user
@@ -266,7 +266,7 @@ CREATE TABLE `p_user` (
   PRIMARY KEY (`id`) USING BTREE,
   UNIQUE KEY `idx_username` (`username`) USING BTREE,
   KEY `idx_phone` (`phone`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=100058 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='用户';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='用户';
 
 -- ----------------------------
 -- Table structure for p_wallet_recharge
@@ -286,7 +286,7 @@ CREATE TABLE `p_wallet_recharge` (
   KEY `idx_user` (`user_id`) USING BTREE,
   KEY `idx_trade_no` (`trade_no`) USING BTREE,
   KEY `idx_trade_status` (`trade_status`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=10023 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='钱包流水';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='钱包流水';
 
 -- ----------------------------
 -- Table structure for p_wallet_statement
@@ -305,6 +305,6 @@ CREATE TABLE `p_wallet_statement` (
   `is_del` tinyint unsigned NOT NULL DEFAULT '0' COMMENT '是否删除 0 为未删除、1 为已删除',
   PRIMARY KEY (`id`) USING BTREE,
   KEY `idx_user` (`user_id`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=10010 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='钱包流水';
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci COMMENT='钱包流水';
 
 SET FOREIGN_KEY_CHECKS = 1;
